@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Modules\Suministros\Http\Controllers\SuministrosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,4 @@ Route::put('/profile', 'ProfileController@update')->name('profile.update');
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+//Route::prefix('suministros',Modules\Suministros\Http\Controllers\SuministrosController::class);
