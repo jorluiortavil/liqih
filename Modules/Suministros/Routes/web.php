@@ -13,4 +13,5 @@
 
 Route::prefix('suministros')->group(function() {
     Route::get('/', 'SuministrosController@index');
+    Route::resource('reception', ReceptionsController::class);
 });
