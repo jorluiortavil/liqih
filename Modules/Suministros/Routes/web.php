@@ -1,5 +1,6 @@
 <?php
-
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,8 +11,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::group(["middleware" => "role"], function () {
 Route::prefix('suministros')->group(function() {
     Route::get('/', 'SuministrosController@index');
     Route::resource('reception', ReceptionsController::class);
+    Route::resource('store', ArticlesController::class);
+    Route::resource('medicine', SuppliesController::class);
+});
 });

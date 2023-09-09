@@ -2,7 +2,11 @@
 
 @section('content')
 <!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
 <h1 class="h3 mb-4 text-gray-800">{{ __('Listado de Recibos') }}</h1>
+<a href="reception/create" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+    class="fas fa-plus fa-sm text-white"></i></a>
+</div>
 <table id="datatable" class="table table-striped" style="width:100%">
         <thead>
             <tr>
@@ -26,9 +30,14 @@
                 <th>{{$r->nota}}</th>
                 <th>{{$r->responsable}}</th>
                 <th>{{$r->proveedor}}</th>
-                <th><button type="button" class="btn btn-primary"><i class="far fa-eye"></i></button>
-                    <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                    <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                <th>
+                    <form action="{{ route('reception.destroy', $r->id) }}" method="POST">
+                        @csrf
+                        @method('delete')
+                        <a href="reception/{{$r->id}}" class="btn btn-primary"><i class="far fa-eye"></i></a>
+                        <!--button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button-->
+                        <button type="submit" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                  </form>
                 </th>
             </tr>
             @endforeach
