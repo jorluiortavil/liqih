@@ -45,8 +45,7 @@ class ReceptionsController extends Controller
         $reception->proveedor = $request->proveedor;
         $reception->observacion = $request->observacion;
         $reception->save();
-        $r=$reception->id;
-   return view('suministros::articles.create', ['reception' => $r]);
+        return view('suministros::reception.show', ['receptions'=>$reception]);
     }
 
     /**

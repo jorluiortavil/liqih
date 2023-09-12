@@ -17,7 +17,7 @@
 <!-- Fonts -->
 <link href="{{ asset('/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
 <link href="{{ asset('/vendor/DataTables/datatables.min.css') }}" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+<!--link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"-->
 
 <!-- Styles -->
 <link href="{{ asset('css/sb-admin-2.min.css') }}" rel="stylesheet">
@@ -46,7 +46,7 @@
                 <div class="sidebar-brand-icon">
                     <img src ="{{ asset ('img/LIQIT.svg')}}" class="fas" style="width: 30px">
                 </div>
-                <div class="sidebar-brand-text mx-3">LIQIT-H</div>
+                <div class="sidebar-brand-text mx-3">LIQH</div>
             </a>
             <!-- MENU -->
             @include('suministros::layouts.menu')
@@ -60,7 +60,7 @@
 
             <!-- Sidebar Message -->
             <div class="sidebar-card text-dark fixed-bottom d-lg-flex">
-                <p class="bg-secondary">2023&copy LIQID <br>-TECHNOLOGY-</p>
+                <p class="">2023&copy LIQID <br>-TECHNOLOGY-</p>
             </div>
 
         </ul>
@@ -202,7 +202,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
+                                        <img class="rounded-circle" src={{ asset ('img/undraw_profile_2.svg')}}
                                             alt="...">
                                         <div class="status-indicator"></div>
                                     </div>
@@ -214,7 +214,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
+                                        <img class="rounded-circle" src={{ asset ('img/undraw_profile_3.svg')}}
                                             alt="...">
                                         <div class="status-indicator bg-warning"></div>
                                     </div>
@@ -224,7 +224,7 @@
                                         <div class="small text-gray-500">Morgan Alvarez · 2d</div>
                                     </div>
                                 </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                <!--a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
                                         <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
                                             alt="...">
@@ -235,7 +235,7 @@
                                             told me that people say this to all dogs, even if they aren't good...</div>
                                         <div class="small text-gray-500">Chicken the Dog · 2w</div>
                                     </div>
-                                </a>
+                                </a-->
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
                             </div>
                         </li>

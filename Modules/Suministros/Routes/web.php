@@ -16,6 +16,8 @@ Route::prefix('suministros')->group(function() {
     Route::get('/', 'SuministrosController@index');
     Route::resource('reception', ReceptionsController::class);
     Route::resource('store', ArticlesController::class);
-    Route::resource('medicine', SuppliesController::class);
+    Route::resource('supply', SuppliesController::class);
+    Route::resource('dispatch', DispatchController::class);
+    Route::get('details', 'ArticlesController@details')->name('details');
 });
 });

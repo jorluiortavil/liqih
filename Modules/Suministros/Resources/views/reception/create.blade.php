@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800">{{ __('Recepcion de Articulos') }}</h1>
+    <h1 class="h3 m-4 text-gray-800">{{ __('Recepcion de Suministros') }}</h1>
 
     @if (session('success'))
         <div class="alert alert-success border-left-success alert-dismissible fade show" role="alert">
@@ -23,7 +23,7 @@
         </div>
     @endif
 
-        <div class="col-lg-8 order-lg-1">
+        <div class="col-lg-12 order-lg-1">
 
             <div class="card shadow mb-4">
 
@@ -98,7 +98,7 @@
                         <div class="pl-lg-4">
                             <div class="row">
                                 <div class="col text-center">
-                                    <button type="submit" class="btn btn-primary">Continuar</button>
+                                    <button type="button" class="btn btn-danger m-5"  onClick="history.back()">Cancelar</button><button type="submit" class="btn btn-primary">Continuar</button>
                                 </div>
                             </div>
                         </div>

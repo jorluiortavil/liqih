@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-Route::group(["middleware" => "Role"], function () {
+Route::group(["middleware" => "role:Informatica"], function () {
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/profile', 'ProfileController@index')->name('profile');

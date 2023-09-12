@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
-            $table->string('tipo');
             $table->unsignedBigInteger('supply');
             $table->integer('cantidad');
             $table->string('proveedor');
@@ -24,6 +23,7 @@ return new class extends Migration
             $table->string('almacen');
             $table->string('estante');
             $table->string('indice');
+            $table->timestamps();
             $table->foreign('supply')->references('id')->on('supplies');
         });
     }

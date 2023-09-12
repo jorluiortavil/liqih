@@ -17,11 +17,12 @@ return new class extends Migration
             $table->id();
             $table->string('concepto');
             $table->string('tipo');
-            $table->timestamp('fecha');
+            $table->date('fecha');
             $table->string('nota');
             $table->integer('responsable');
             $table->string('proveedor');
             $table->string('observacion');
+            $table->string('status')->default('ABIERTO');
             $table->timestamps();
         });
     }

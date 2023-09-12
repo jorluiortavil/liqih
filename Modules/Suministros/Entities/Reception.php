@@ -17,4 +17,7 @@ class Reception extends Model
     {
         return \Modules\Suministros\Database\factories\ReceptionFactory::new();
     }
+    public function details(){
+        return $this->hasMany(ReceptionDetail::class, 'reception');
+    }
 }

@@ -18,7 +18,8 @@ return new class extends Migration
             $table->unsignedBigInteger('dispatch');
             $table->unsignedBigInteger('supply');
             $table->integer('cantidad');
-            $table->foreign('dispatch')->references('id')->on('dispatch');
+            $table->timestamps();
+            $table->foreign('dispatch')->references('id')->on('dispatches');
             $table->foreign('supply')->references('id')->on('supplies');
         });
     }

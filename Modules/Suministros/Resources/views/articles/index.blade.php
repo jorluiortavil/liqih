@@ -2,16 +2,16 @@
 
 @section('content')
 <!-- Page Heading -->
-<div class="d-sm-flex align-items-center justify-content-between mb-4">
-<h1 class="h3 mb-4 text-gray-800">{{ __('Listado de Articulos') }}</h1>
-<a href="medicine" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+<div class="d-sm-flex align-items-center justify-content-between m-4">
+<h1 class="h3 mb-4 text-gray-800">{{ __('Suministros en Almacen') }}</h1>
+<a href="supply" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
     class="fas fa-pills fa-sm text-white"></i></a>
 </div>
 <table id="datatable" class="table table-striped" style="width:100%">
         <thead>
             <tr>
                 <th>N°</th>
-                <th>Codigo</th>
+                <th>Código</th>
                 <th>Tipo</th>
                 <th>Nombre</th>
                 <th>Cantidad</th>
@@ -25,9 +25,9 @@
             @foreach ($articles as $a )
             <tr>
                 <th>{{$a->id}}</th>
-                <th>{{$a->codigo}}</th>
-                <th>{{$a->tipo}}</th>
-                <th>{{$a->nombre}}</th>
+                <th>{{$a->supplies->codigo}}</th>
+                <th>{{$a->supplies->tipo}}</th>
+                <th>{{$a->supplies->nombre}}</th>
                 <th>{{$a->cantidad}}</th>
                 <th>{{$a->proveedor}}</th>
                 <th>{{$a->caducidad}}</th>

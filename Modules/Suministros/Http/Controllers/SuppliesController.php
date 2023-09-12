@@ -16,7 +16,7 @@ class SuppliesController extends Controller
     public function index()
     {
         $supplies=Supply::All();
-        return view('suministros::medicines.index', ['supplies' => $supplies]);
+        return view('suministros::supply.index', ['supplies' => $supplies]);
     }
 
     /**
@@ -25,7 +25,7 @@ class SuppliesController extends Controller
      */
     public function create()
     {
-        return view('suministros::medicines.create');
+        return view('suministros::supply.create');
     }
 
     /**
@@ -37,6 +37,7 @@ class SuppliesController extends Controller
     {
         $supply = new Supply();
         $supply->codigo = $request->codigo;
+        $supply->tipo = $request->tipo;
         $supply->nombre = $request->nombre;
         $supply->principio = $request->principio;
         $supply->unidades = $request->unidades;
@@ -46,7 +47,7 @@ class SuppliesController extends Controller
         $supply->laboratorio = $request->laboratorio;
         $supply->farmacopedia = $request->farmacopedia;
         $supply->save();
-   return redirect()->route('medicine.index')->with('datos','Registro guardado correctamente!');
+   return redirect()->route('supply.index')->with('datos','Registro guardado correctamente!');
     }
 
     /**

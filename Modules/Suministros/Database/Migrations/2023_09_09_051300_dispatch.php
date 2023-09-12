@@ -13,12 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('dispatch', function (Blueprint $table) {
+        Schema::create('dispatches', function (Blueprint $table) {
             $table->id();
             $table->string('concepto');
-            $table->string('tipo');
             $table->timestamp('fecha');
-            $table->string('nota');
             $table->integer('responsable');
             $table->string('beneficiario');
             $table->string('observacion');

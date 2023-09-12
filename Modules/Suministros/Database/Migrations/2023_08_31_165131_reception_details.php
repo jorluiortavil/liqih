@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('proveedor');
             $table->string('lote');
             $table->date('caducidad');
+            $table->timestamps();
             $table->foreign('reception')->references('id')->on('receptions');
             $table->foreign('supply')->references('id')->on('supplies');
         });
