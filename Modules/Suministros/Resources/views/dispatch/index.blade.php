@@ -14,10 +14,11 @@
                 <th>Concepto</th>
                 <th>Tipo</th>
                 <th>Fecha</th>
-                <th>Nota</th>
                 <th>Responsable</th>
-                <th>Proovedor</th>
-                <th>Acciones</th>
+                <th>Beneficiario</th>
+                <th>Observación</th>
+                <th>
+                </th>
             </tr>
         </thead>
         <tbody>
@@ -27,14 +28,14 @@
                 <th>{{$d->concepto}}</th>
                 <th>{{$d->tipo}}</th>
                 <th>{{$d->fecha}}</th>
-                <th>{{$d->nota}}</th>
                 <th>{{$d->responsable}}</th>
-                <th>{{$d->proveedor}}</th>
+                <th>{{$d->beneficiario}}</th>
+                <th>{{$d->observacion}}</th>
                 <th>
-                    <form action="{{ route('reception.destroy', $d->id) }}" method="POST">
+                    <form action="{{ route('dispatch.destroy', $d->id) }}" method="POST">
                         @csrf
                         @method('delete')
-                        <a href="reception/{{$d->id}}" class="btn btn-primary"><i class="far fa-eye"></i></a>
+                        <a href="dispatch/{{$d->id}}" class="btn btn-primary"><i class="far fa-eye"></i></a>
                         <!--button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button-->
                         <button type="submit" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
                   </form>

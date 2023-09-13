@@ -48,14 +48,12 @@ class ArticlesController extends Controller
         $reception-> reception= $request->reception;
         $reception->supply = $request->nombre;
         $reception->cantidad = $request->cantidad;
-        $reception->proveedor = $request->proveedor;
         $reception->lote = $request->lote;
         $reception->caducidad = $request->caducidad;
         $reception->save();
         $article= new Article();
         $article->supply = $request->nombre;
         $article->cantidad = $request->cantidad;
-        $article->proveedor = $request->proveedor;
         $article->lote = $request->lote;
         $article->caducidad = $request->caducidad;
         $article->almacen = $request->almacen;

@@ -10,7 +10,7 @@ class ReceptionDetail extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id', 'reception', 'tipo', 'supply', 'cantidad', 'proveedor', 'lote', 'caducidad', 'estante', 'indice'
+        'id', 'reception', 'tipo', 'supply', 'cantidad', 'lote', 'caducidad', 'estante', 'indice'
     ];
    
     public function supplies(){

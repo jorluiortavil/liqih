@@ -41,24 +41,13 @@ $reception=$_GET['reception'];
                         <div class="pl-lg-4">
                             <div class="row">
                                 <input type="hidden" id="concepto" class="form-control" name="reception" placeholder="" value="{{ $reception}}">
-                                <div class="col-lg-4">
+                                <div class="col-lg-6">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="concepto">Codigo<span class="small text-danger">*</span></label>
                                         <input type="text" id="codigo" class="form-control" name="codigo" placeholder="" value="{{ old('codigo')}}">
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="">Tipo<span class="small text-danger">*</span></label>
-                                        <select class="form-control" aria-label="Default select example" name="tipo">
-                                            <option selected>Selecconar..</option>
-                                            <option value="Medicamento">Medicamento</option>
-                                            <option value="Insumo">Insumo</option>
-                                            <option value="Otro">Otro</option>
-                                          </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-6">
                                     <div class="form-group">
                                         <label class="form-control-label" for="concepto">Cantidad<span class="small text-danger">*</span></label>
                                         <input type="number" id="concepto" class="form-control" name="cantidad" placeholder="" value="{{ old('cantidad')}}">
@@ -81,21 +70,15 @@ $reception=$_GET['reception'];
                             </div>
 
                             <div class="row">
-                                <div class="col-lg-4">
+                                <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label class="form-control-label" for="concepto">Proveedor<span class="small text-danger"></span></label>
-                                        <input type="number" id="concepto" class="form-control" name="proveedor" placeholder="" value="{{ old('proveedor')}}">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="concepto">Caducidad<span class="small text-danger"></span></label>
+                                        <label class="form-control-label" for="concepto">Caducidad<span class="small text-danger">*</span></label>
                                         <input type="date" id="concepto" class="form-control" name="caducidad" placeholder="" value="{{ old('caducidad')}}">
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label class="form-control-label" for="concepto">Lote<span class="small text-danger"></span></label>
+                                        <label class="form-control-label" for="concepto">Lote<span class="small text-danger">*</span></label>
                                         <input type="text" id="concepto" class="form-control" name="lote" placeholder="" value="{{ old('lote')}}">
                                     </div>
                                 </div>
@@ -105,7 +88,7 @@ $reception=$_GET['reception'];
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label class="form-control-label" for="concepto">Almacen<span class="small text-danger">*</span></label>
-                                        <input type="text" id="concepto" class="form-control" name="almacen" placeholder="" value="Suministros">
+                                        <input type="text" id="concepto" class="form-control" name="almacen" placeholder="" value="Suministros" disabled>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">

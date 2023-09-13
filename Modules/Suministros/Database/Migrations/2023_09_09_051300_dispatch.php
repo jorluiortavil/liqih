@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('dispatches', function (Blueprint $table) {
             $table->id();
             $table->string('concepto');
+            $table->string('tipo');
             $table->timestamp('fecha');
             $table->integer('responsable');
             $table->string('beneficiario');

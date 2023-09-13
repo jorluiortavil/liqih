@@ -6,6 +6,7 @@ use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Modules\Suministros\Entities\Dispatch;
+use Illuminate\Support\Facades\Auth;
 
 class DispatchController extends Controller
 {
@@ -35,7 +36,15 @@ class DispatchController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $dispatch = new Dispatch();
+        $dispatch->concepto = $request->concepto;
+        $dispatch->tipo = $request->tipo;
+        $dispatch->fecha = $request->fecha;
+        $dispatch->responsable = Auth::user()->id;
+        $dispatch->beneficiario = $request->beneficiario;
+        $dispatch->observacion = $request->observacion;
+        $dispatch->save();
+        return view('suministros::dispatch.show', ['dispatch'=>$dispatch]);
     }
 
     /**
@@ -45,7 +54,8 @@ class DispatchController extends Controller
      */
     public function show($id)
     {
-        return view('suministros::show');
+        $dispatch = Dispatch::find($id);
+        return view('suministros::dispatch.show', compact('dispatch'));
     }
 
     /**
@@ -55,7 +65,8 @@ class DispatchController extends Controller
      */
     public function edit($id)
     {
-        return view('suministros::edit');
+        $dispatch = Dispatch::find($id);
+        return view('suministros::dispatch.edit', compact('dispatch'));
     }
 
     /**
@@ -74,8 +85,9 @@ class DispatchController extends Controller
      * @param int $id
      * @return Renderable
      */
-    public function destroy($id)
+    public function destroy(Dispatch $dispatch)
     {
-        //
+        $dispatch->delete();
+        return redirect()->route('dispatch.index');
     }
 }

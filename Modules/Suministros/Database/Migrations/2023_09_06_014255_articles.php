@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('supply');
             $table->integer('cantidad');
-            $table->string('proveedor');
             $table->string('lote');
             $table->date('caducidad');
             $table->string('almacen');

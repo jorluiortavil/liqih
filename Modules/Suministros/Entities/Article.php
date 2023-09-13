@@ -10,7 +10,7 @@ class Article extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id', 'reception', 'supply', 'cantidad', 'proveedor', 'lote', 'caducidad', 'estante', 'indice'
+        'id', 'reception', 'supply', 'cantidad', 'lote', 'caducidad', 'estante', 'indice'
     ];
     
     protected static function newFactory()

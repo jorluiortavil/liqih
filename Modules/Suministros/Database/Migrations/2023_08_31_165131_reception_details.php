@@ -18,7 +18,6 @@ return new class extends Migration
             $table->unsignedBigInteger('reception');
             $table->unsignedBigInteger('supply');
             $table->integer('cantidad');
-            $table->string('proveedor');
             $table->string('lote');
             $table->date('caducidad');
             $table->timestamps();

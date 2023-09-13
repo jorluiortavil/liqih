@@ -30,7 +30,7 @@
                
                 <div class="card-body">
 
-                    <form method="POST" action="{{ route('reception.store') }}" autocomplete="off">
+                    <form method="POST" action="{{ route('dispatch.store') }}" autocomplete="off">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <input type="hidden" name="_method" value="POST">
                         <div class="pl-lg-4">
@@ -44,27 +44,21 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-lg-4">
+                                <div class="col-lg-6">
                                     <div class="form-group">
                                         <label class="form-control-label" for="">Tipo<span class="small text-danger">*</span></label>
                                         <select class="form-control" aria-label="Default select example" name="tipo">
                                             <option selected>Selecconar..</option>
-                                            <option value="Compra">Compra</option>
+                                            <option value="Asignacion">Asignacion</option>
                                             <option value="Donación">Donación</option>
                                             <option value="Devolución">Devolución</option>
                                           </select>
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-6">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="fecha">Fecha<span class="small text-danger">*</span></label>
                                         <input type="date" id="fecha" class="form-control" name="fecha" placeholder="" value="@php echo date("Y-m-d"); @endphp">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group focused">
-                                        <label class="form-control-label" for="concepto">Nota<span class="small text-danger"></span></label>
-                                        <input type="text" id="concepto" class="form-control" name="nnota" placeholder="" value="{{ old('nnota')}}">
                                     </div>
                                 </div>
                             </div>
@@ -73,13 +67,13 @@
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="concepto">Responsable<span class="small text-danger">*</span></label>
-                                        <input type="text" id="concepto" class="form-control" name="responsable" placeholder="" value="{{ Auth::user()->name}}">
+                                        <input type="text" id="concepto" class="form-control" name="responsable" placeholder="" value="{{ Auth::user()->name}}" disabled>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
-                                        <label class="form-control-label" for="concepto">Proveedor<span class="small text-danger">*</span></label>
-                                        <input type="text" id="concepto" class="form-control" name="proveedor" placeholder="" value="{{ old('proveedor')}}">
+                                        <label class="form-control-label" for="concepto">Beneficiario<span class="small text-danger">*</span></label>
+                                        <input type="text" id="concepto" class="form-control" name="beneficiario" placeholder="" value="{{ old('proveedor')}}">
                                     </div>
                                 </div>
                 

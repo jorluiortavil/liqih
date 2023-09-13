@@ -15,4 +15,7 @@ class Dispatch extends Model
     {
         return \Modules\Suministros\Database\factories\DispatchFactory::new();
     }
+    public function details(){
+        return $this->hasMany(DispatchDetail::class, 'dispatch');
+    }
 }
