@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('estante');
             $table->string('indice');
             $table->timestamps();
-            $table->foreign('supply')->references('id')->on('supplies');
+            $table->foreign('supply')->references('id')->on('supplies')->onDelete(NULL);
         });
     }
 

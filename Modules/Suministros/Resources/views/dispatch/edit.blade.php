@@ -37,7 +37,7 @@ $reception=$_GET['reception'];
 
                     <form method="POST" action="{{ route('dispatch.update', $dispatch->id) }}" autocomplete="off">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        <input type="hidden" name="_method" value="POST">
+                        @method('PUT')
                         <div class="pl-lg-4">
                             <div class="row">
                                 <input type="hidden" id="concepto" class="form-control" name="dispatch" placeholder="" value="{{ $dispatch}}">
@@ -58,7 +58,6 @@ $reception=$_GET['reception'];
                                         <label class="form-control-label" for="concepto">Descripción<span class="small text-danger">*</span></label>
                                         <select class="form-control" aria-label="Default select example" name="nombre" id="nombre">
                                         @php
-                                        $articles=DB::table('articles')->get();
                                         foreach($articles as $a){
                                             print('<option value="'.$a->id.'">'.$a->supplies->nombre.'-'.$a->supplies->principio.'-'.$a->supplies->unidades.'-'.$a->supplies->presentacion.'-'.$a->supplies->formula.'-'.$a->supplies->laboratorio.'</option>');
                                         }

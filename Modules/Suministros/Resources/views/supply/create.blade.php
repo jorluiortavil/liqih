@@ -77,7 +77,7 @@
                                     <div class="form-group">
                                         <label class="form-control-label" for="">Presentación<span class="small text-danger">*</span></label>
                                         <select class="form-control" aria-label="Default select example" name="presentacion">
-                                            <option selected>Selecconar..</option>
+                                            <option value="" selected>Seleccionar..</option>
                                             <option value="Tabletas">Tableta</option>
                                             <option value="Capsulas">Capsula</option>
                                             <option value="Capsulas">Gragea</option>

@@ -3,7 +3,7 @@
 @section('content')
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between m-4">
-    <h1 class="h3 mb-4 text-gray-800">{{ __('Recibo de Insumos') }}</h1>
+    <h1 class="h3 mb-4 text-gray-800">{{ __('Despacho de Insumos') }}</h1>
     <a href="{{ route('dispatch.edit', ['dispatch'=>$dispatch->id]) }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
         class="fas fa-plus fa-sm text-white"></i></a>
     </div>

@@ -33,7 +33,7 @@
                 <th>{{$a->caducidad}}</th>
                 <th>{{$a->ubicación}}</th>
                 <th>
-                    <form action="{{ route('reception.destroy', $a->id) }}" method="POST">
+                    <form action="{{ route('supply.destroy', $a->id) }}" method="POST">
                         @csrf
                         @method('delete')
                         <a href="reception/{{$a->id}}" class="btn btn-primary"><i class="far fa-eye"></i></a>

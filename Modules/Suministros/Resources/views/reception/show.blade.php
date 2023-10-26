@@ -12,7 +12,7 @@
         <div class="alert alert-success border-left-success alert-dismissible fade show" role="alert">
             {{ session('success') }}
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+                <span aria-hidden="true">×</span>
             </button>
         </div>
     @endif
@@ -56,7 +56,6 @@
             </thead>
             <tbody>
                 @foreach ($receptions->details as $r )
-                @php
                 
                 <tr>
                     <th>{{$r->id}}</th>
@@ -65,7 +64,7 @@
                     <th>{{$r->proveedor}}</th>
                     <th>{{$r->caducidad}}</th>
                     <th>
-                        <form action="{{ route('reception.destroy', $receptions->id) }}" method="POST">
+                        <form action="{{ route('store.destroy', $r->id) }}" method="POST">
                             @csrf
                             @method('delete')
                             <!--button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button-->

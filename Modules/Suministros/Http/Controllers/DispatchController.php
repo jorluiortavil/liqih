@@ -6,7 +6,10 @@ use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Modules\Suministros\Entities\Dispatch;
+use Modules\Suministros\Entities\Article;
 use Illuminate\Support\Facades\Auth;
+use Modules\Suministros\Entities\Supply;
+use Modules\Suministros\Entities\DispatchDetail;
 
 class DispatchController extends Controller
 {
@@ -66,7 +69,8 @@ class DispatchController extends Controller
     public function edit($id)
     {
         $dispatch = Dispatch::find($id);
-        return view('suministros::dispatch.edit', compact('dispatch'));
+        $articles=Article::All();
+        return view('suministros::dispatch.edit', ['dispatch' => $dispatch,'articles' => $articles]);
     }
 
     /**
@@ -77,7 +81,11 @@ class DispatchController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $dispatch = new DispatchDetail();
+        $dispatch->dispatch = $id;
+        $dispatch->supply = $request->codigo;
+        $dispatch->cantidad = $request->cantidad;
+        $dispatch->save();
     }
 
     /**

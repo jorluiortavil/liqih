@@ -17,7 +17,7 @@ class ArticlesController extends Controller
      * @return Renderable
      */
     public function details(Request $request) {
-        dd($request);
+        //dd($request);
         $details = Supply :: where('codigo',$request)->get();
         return response()->json(['details' => $details]);
       
@@ -101,6 +101,10 @@ class ArticlesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = ReceptionDetail::find($id);
+        $post->delete();
+        $suply= Supply::find($id);
+        $suply->delete();
+        return back()->withErrors(['field_name' => ['Se elimino el articulo  '.$id.'']]);
     }
 }

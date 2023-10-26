@@ -88,6 +88,8 @@ class SuppliesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $suply= Supply::find($id);
+        $suply->delete();
+        return back()->withErrors(['field_name' => ['Se elimino el articulo  '.$id.'']]);
     }
 }

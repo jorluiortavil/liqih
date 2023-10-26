@@ -88,7 +88,7 @@ $reception=$_GET['reception'];
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label class="form-control-label" for="concepto">Almacen<span class="small text-danger">*</span></label>
-                                        <input type="text" id="concepto" class="form-control" name="almacen" placeholder="" value="Suministros" disabled>
+                                        <input type="text" id="concepto" class="form-control" name="almacen" placeholder="" value="Suministros">
                                     </div>
                                 </div>
                                 <div class="col-lg-4">

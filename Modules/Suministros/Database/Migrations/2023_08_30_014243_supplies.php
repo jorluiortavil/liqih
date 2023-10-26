@@ -20,10 +20,10 @@ return new class extends Migration
             $table->string('nombre');
             $table->string('principio')->nullable();
             $table->integer('unidades');
-            $table->string('presentacion');
+            $table->string('presentacion')->nullable();
             $table->string('formula')->nullable();
             $table->string('administración')->nullable();
-            $table->string('laboratorio');
+            $table->string('laboratorio')->nullable();
             $table->string('farmacopedia')->nullable();
             $table->timestamps();
         });
